@@ -1,0 +1,17 @@
+version: "3"
+services:
+  openldap:
+      build:
+        context: .
+        dockerfile: ./docker/Dockerfile-Openldap
+      restart: always
+      container_name: "OpenLDAP"
+      env_file:
+        - ./env/.env_ldap
+      volumes:
+          - 'openldap_data:/bitnami/openldap'
+      ports:
+          - '1389:1389'
+          - '1636:1636'
+volumes:
+  openldap_data:
