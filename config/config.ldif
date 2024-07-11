@@ -44,4 +44,4 @@ objectClass: inetOrgPerson
 cn: outroUsuario
 sn: Usuario
 uid: outroUsuario
-userPassword: outraSenha456  # Outra senha em texto claro
+userPassword: password1234  # Outra senha em texto claro
