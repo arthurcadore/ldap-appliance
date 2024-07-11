@@ -10,8 +10,9 @@ services:
         - ./env/.env_ldap
       volumes:
           - 'openldap_data:/bitnami/openldap'
+          - './config:/ldifs/custom'
       ports:
-          - '1389:1389'
-          - '1636:1636'
+          - '389:1389'
+          - '636:1636'
 volumes:
   openldap_data:

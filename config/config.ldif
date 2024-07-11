@@ -1,0 +1,47 @@
+# Criar o domínio pedremp.local
+dn: dc=pedremp,dc=local
+objectClass: top
+objectClass: domain
+dc: pedremp
+
+# Criar unidade organizacional para grupos
+dn: ou=Groups,dc=pedremp,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+
+# Criar o grupo LDAP
+dn: cn=LDAP,ou=Groups,dc=pedremp,dc=local
+objectClass: top
+objectClass: groupOfNames
+cn: LDAP
+member: cn=ldapremp,ou=Users,dc=pedremp,dc=local
+member: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
+
+# Criar unidade organizacional para usuários
+dn: ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: organizationalUnit
+ou: Users
+
+# Criar usuário ldapremp
+dn: cn=ldapremp,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: ldapremp
+sn: Remp
+uid: ldapremp
+userPassword: password123  # Senha em texto claro
+
+# Criar outro usuário
+dn: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: outroUsuario
+sn: Usuario
+uid: outroUsuario
+userPassword: outraSenha456  # Outra senha em texto claro
