@@ -48,7 +48,7 @@ objectClass: inetOrgPerson
 cn: arthur
 sn: Usuario
 uid: arthur
-userPassword: arthurpass
+userPassword: {SSHA}qA8LKHHZ2nwAlo2p7d9EKkJZbczAUO1P
 
 # User Ricardo
 dn: cn=ricardo,ou=Users,dc=pedremp,dc=local
