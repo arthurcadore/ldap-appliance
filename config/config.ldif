@@ -1,10 +1,10 @@
-# Criar o domínio pedremp.local
+# domain "pedremp.local"
 dn: dc=pedremp,dc=local
 objectClass: top
 objectClass: domain
 dc: pedremp
 
-# Criar unidade organizacional para grupos
+# organizacional Unit "Groups"
 dn: ou=Groups,dc=pedremp,dc=local
 objectClass: top
 objectClass: organizationalUnit
@@ -15,40 +15,31 @@ dn: cn=LDAP,ou=Groups,dc=pedremp,dc=local
 objectClass: top
 objectClass: groupOfNames
 cn: LDAP
-member: cn=ldapremp,ou=Users,dc=pedremp,dc=local
-member: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
+member: cn=ana,ou=Users,dc=pedremp,dc=local
+member: cn=ricardo,ou=Users,dc=pedremp,dc=local
 member: cn=arthur,ou=Users,dc=pedremp,dc=local
+member: cn=guilherme,ou=Users,dc=pedremp,dc=local
+member: cn=rodrigo,ou=Users,dc=pedremp,dc=local
+member: cn=roosvelt,ou=Users,dc=pedremp,dc=local
 
-
-# Criar unidade organizacional para usuários
+# organizacional Unit "Users"
 dn: ou=Users,dc=pedremp,dc=local
 objectClass: top
 objectClass: organizationalUnit
 ou: Users
 
-# Criar usuário ldapremp
-dn: cn=ldapremp,ou=Users,dc=pedremp,dc=local
+# User Ana
+dn: cn=ana,ou=Users,dc=pedremp,dc=local
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-cn: ldapremp
+cn: ana
 sn: Remp
-uid: ldapremp
-userPassword: password123
+uid: ana
+userPassword: anapass
 
-# Criar outro usuário
-dn: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
-objectClass: top
-objectClass: person
-objectClass: organizationalPerson
-objectClass: inetOrgPerson
-cn: outroUsuario
-sn: Usuario
-uid: outroUsuario
-userPassword: password1234
-
-# Criar outro usuário
+# User Arthur
 dn: cn=arthur,ou=Users,dc=pedremp,dc=local
 objectClass: top
 objectClass: person
@@ -57,4 +48,51 @@ objectClass: inetOrgPerson
 cn: arthur
 sn: Usuario
 uid: arthur
-userPassword: password1234
+userPassword: arthurpass
+
+# User Ricardo
+dn: cn=ricardo,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: ricardo
+sn: Usuario
+uid: ricardo
+userPassword: ricardopass
+
+# User Guilherme
+dn: cn=guilherme,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: guilherme
+sn: Usuario
+uid: guilherme
+userPassword: guilhermepass
+
+# User Rodrigo
+dn: cn=rodrigo,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: rodrigo
+sn: Usuario
+uid: rodrigo
+userPassword: rodrigopass
+
+# User Roosvelt
+dn: cn=roosvelt,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: roosvelt
+sn: Usuario
+uid: roosvelt
+userPassword: roosveltpass
+
+
+
