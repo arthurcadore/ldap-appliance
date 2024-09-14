@@ -17,6 +17,8 @@ objectClass: groupOfNames
 cn: LDAP
 member: cn=ldapremp,ou=Users,dc=pedremp,dc=local
 member: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
+member: cn=arthur,ou=Users,dc=pedremp,dc=local
+
 
 # Criar unidade organizacional para usuários
 dn: ou=Users,dc=pedremp,dc=local
@@ -33,7 +35,7 @@ objectClass: inetOrgPerson
 cn: ldapremp
 sn: Remp
 uid: ldapremp
-userPassword: password123  # Senha em texto claro
+userPassword: password123
 
 # Criar outro usuário
 dn: cn=outroUsuario,ou=Users,dc=pedremp,dc=local
@@ -44,4 +46,15 @@ objectClass: inetOrgPerson
 cn: outroUsuario
 sn: Usuario
 uid: outroUsuario
-userPassword: password1234  # Outra senha em texto claro
+userPassword: password1234
+
+# Criar outro usuário
+dn: cn=arthur,ou=Users,dc=pedremp,dc=local
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: arthur
+sn: Usuario
+uid: arthur
+userPassword: password1234
